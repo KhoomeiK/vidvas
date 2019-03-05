@@ -16,6 +16,9 @@ app.add_url_rule(
     )
 )
 
+@app.route("/hello")
+def test():
+    return 'Hello World'
 
 @app.teardown_appcontext
 def shutdown_session(exception=None):
