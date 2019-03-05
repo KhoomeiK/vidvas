@@ -6,10 +6,11 @@ backend: Flask (routing), Graphene (GraphQL interface with database), sqlAlchemy
 frontend: React
 
 # Broad Todo:
-- scrape sacred-texts
+- DONE (todo manual few) scrape sacred-texts rigveda
+- DONE model and implement database
 - set up flask server and graphql
-- model and implement database
 - serve requested documents from Postgres, through GraphQL, out of Flask as JSON
+- frontend consumes gql api
 
 # Links
 https://medium.com/@marvinkome/creating-a-graphql-server-with-flask-ae767c7e2525

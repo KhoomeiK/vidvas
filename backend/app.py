@@ -1,26 +1,26 @@
-# Imports
 from flask import Flask
+from flask_graphql import GraphQLView
 
-# app initialization
+from models import db_session
+from schema import schema
+
 app = Flask(__name__)
 app.debug = True
-# Configs
 
-# TO-DO
-# Modules
+app.add_url_rule(
+    '/gql',
+    view_func=GraphQLView.as_view(
+        'graphql',
+        schema=schema,
+        graphiql=True  # for having the GraphiQL interface
+    )
+)
 
-# TO-DO
-# Models
 
-# TO-DO
-# Schema Objects
+@app.teardown_appcontext
+def shutdown_session(exception=None):
+    db_session.remove()
 
-# TO-DO
-# Routes
 
-# TO-DO
-@app.route('/')
-def index():
-    return 'test'
 if __name__ == '__main__':
-     app.run()
+    app.run()
