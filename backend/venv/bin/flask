@@ -1,4 +1,4 @@
-#!/Users/rohan/Documents/Webwork/vidvas/backend/venv/bin/python
+#!/home/rohan/vidvas/backend/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -3,7 +3,7 @@ from flask_graphql import GraphQLView
 from models import db_session
 from schema import schema
 
-from waitress import serve
+#from waitress import serve
 
 app = Flask(__name__)
 app.debug = True
@@ -26,7 +26,7 @@ def shutdown_session(exception=None):
     db_session.remove()
 
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80)
 
-serve(app)
+#serve(app, host='0.0.0.0', port=80)
