@@ -1,4 +1,0 @@
-sudo uwsgi --http 0.0.0.0:80 --wsgi-file app.py --callable app 
-sudo uwsgi --http 0.0.0.0:80 --https 0.0.0.0:443,sslcertificate.crt,key.key --wsgi-file app.py --callable app 
-https://cloud.google.com/load-balancing/docs/ssl-certificates
-https://uwsgi-docs.readthedocs.io/en/latest/HTTPS.html
