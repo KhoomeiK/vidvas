@@ -14,7 +14,7 @@ class VerseConnection(relay.Connection):
     class Meta:
         node = Verse
 
-
+# passing arguments?
 class Query(graphene.ObjectType):
     node = relay.Node.Field()
     # Allows sorting over multiple columns, by default over the primary key
